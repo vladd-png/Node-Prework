@@ -19,6 +19,7 @@ getAllMessages = (response) => {
 }
 
 addMessage = (newMessage, response) => {
+  messages.push(newMessage)
   response.writeHead(200, { 'Content-Type': 'text/plain' })
   response.write( JSON.stringify( newMessage ));
   // response.write( 'status code: 201' );
